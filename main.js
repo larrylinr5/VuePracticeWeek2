@@ -12,9 +12,6 @@ const app = createApp({
             },
             products: [],
             tempProduct: {},
-            bodyStyle:{
-                
-            }
         }
     },
     methods: {
@@ -33,8 +30,7 @@ const app = createApp({
 
                     //this.getProducts()
 
-                    //切換頁面
-                    this.page = 'productPage'
+                    
 
                     return this.getProducts()
                 })
@@ -50,6 +46,8 @@ const app = createApp({
                 .then(res => {
                     //console.log('res>',res.data.products)
                     this.products = res.data.products
+                    //切換頁面
+                    this.page = 'productPage'
                 })
                 // 失敗的結果
                 .catch(error => {
